@@ -209,15 +209,17 @@ class _InvestmentCardState extends State<InvestmentCard> {
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    "0.00010703 BTC",
-                    style: TextStyle(
-                      fontSize: 15.0,
-                    ),
+                Spacer(),
+                Text(
+                  "0.00010703 BTC",
+                  style: TextStyle(
+                    fontSize: 15.0,
                   ),
                 ),
+              IconButton(
+                icon: const Icon(Icons.arrow_forward_ios_rounded,color: Colors.grey,),
+                onPressed: () {},
+              ),
               ],
             ),
             Divider(

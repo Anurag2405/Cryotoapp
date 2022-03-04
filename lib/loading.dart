@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:atxcoin/services/fetch_data.dart';
 import 'package:atxcoin/services/cryptocurrency.dart';
 import 'main.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 
 class Loading extends StatefulWidget {
@@ -18,7 +19,8 @@ class _LoadingState extends State<Loading> {
     List<Coin> coins = [];
     apiService instance = apiService();
     coins = await instance.fetchCoin();
-    // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Mainpage());
+    // Navigator.push(context, MaterialPageRoute(
+    //   builder: (context) => Mainpage(coins)));
   }
 
   @override
@@ -28,14 +30,26 @@ class _LoadingState extends State<Loading> {
   }
 
 
-
+  // logo url:  logomakr.com/app/3eTeV1
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(50.0),
-        child: Text('loading'),
-      ),
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Center(
+          child:Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image(image: AssetImage('assets/logo.png'),),
+              SizedBox(height: 40,),
+              SpinKitWave(
+                color: Colors.blue[900],
+                size: 50.0,
+              ),
+            ],
+          ),
+        ),
+      )
     );
   }
 }

@@ -17,8 +17,9 @@ void main() => runApp(MaterialApp(
 
 
 class Mainpage extends StatefulWidget {
-  const Mainpage({Key? key}) : super(key: key);
-
+  // const Mainpage({Key? key}) : super(key: key);
+  // List<Coin> coins;
+  // Mainpage({this.coins});
   @override
   _MainpageState createState() => _MainpageState();
 }

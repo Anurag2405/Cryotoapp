@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class Prices extends StatefulWidget {
@@ -52,13 +50,13 @@ class _PricesState extends State<Prices> with TickerProviderStateMixin {
                   Column(
                     children: [
                       Sticky(),
-                      Coin(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: 3152476, change: 3.56211,),
+                      Coin(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: 3152476, change: 3.56211,changePercentage: 4.24,),
                     ],
                   ),
                   Column(
                     children: [
                       Sticky(),
-                      Coin(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: 3152476, change: -3.56211,),
+                      Coin(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: 3152476, change: -3.56211,changePercentage: 4.24),
                     ],
                   ),
                 ],
@@ -102,7 +100,7 @@ class SearchField extends StatelessWidget {
           ),
         ],
       ),
-    );;
+    );
   }
 }
 
@@ -119,9 +117,10 @@ class Sticky extends StatelessWidget {
           Container(
             child: Row(
               children: [
-                Text("COIN NAME",
-                  style: TextStyle(color: Colors.grey, fontSize: 12),),
-                SizedBox(width: 186,),
+                Expanded(
+                  child: Text("COIN NAME",
+                    style: TextStyle(color: Colors.grey, fontSize: 12),),
+                ),
                 Text(
                   "PRICE", style: TextStyle(color: Colors.grey, fontSize: 12),),
                 SizedBox(width: 20,),
@@ -143,20 +142,20 @@ class Sticky extends StatelessWidget {
 
 
 class Coin extends StatelessWidget {
-  Coin({required this.name,required this.symbol,required this.imageurl,required this.price,required this.change});
+  Coin({required this.name,required this.symbol,required this.imageurl,required this.price,required this.change, required this.changePercentage});
 
   String name;
   String symbol;
   String imageurl;
   double price;
   double change;
+  double changePercentage;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Expanded(
         child: ListView(
-          scrollDirection: Axis.vertical,
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -210,10 +209,6 @@ class Coin extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            Divider(
-              height: 10.0,
-              color: Colors.grey[500],
             ),
           ],
         ),
