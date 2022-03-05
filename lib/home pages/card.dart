@@ -39,7 +39,7 @@ class Coincard extends StatelessWidget {
                 Text(
                   name,
                   style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 15.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
