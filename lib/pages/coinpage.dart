@@ -85,7 +85,7 @@ class Coinpage extends StatelessWidget {
                                 Text(
                                   '$changePercentage%',
                                   style: TextStyle(
-                                    color: changePercentage.toDouble() < 0 ? Colors.red : Colors.green,
+                                    color: changePercentage.toDouble() < 0 ? Colors.redAccent : Colors.greenAccent[400],
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18.0,
                                   ),
@@ -94,7 +94,7 @@ class Coinpage extends StatelessWidget {
                                 Text(
                                   '$change',
                                   style: TextStyle(
-                                    color: change.toDouble() < 0 ? Colors.red : Colors.green,
+                                    color: change.toDouble() < 0 ? Colors.redAccent : Colors.greenAccent[400],
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18.0,
                                   ),
