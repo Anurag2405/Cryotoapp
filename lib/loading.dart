@@ -1,24 +1,24 @@
-import 'package:atxcoin/main.dart';
 import 'package:flutter/material.dart';
 import 'package:atxcoin/services/fetch_data.dart';
 import 'package:atxcoin/services/cryptocurrency.dart';
-import 'main.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
 
+
   @override
   _LoadingState createState() => _LoadingState();
 }
 
 class _LoadingState extends State<Loading> {
+  List<Coin> coins = [];
 
   void gettingCoinlist() async {
-    List<Coin> coins = [];
     apiService instance = apiService();
     coins = await instance.fetchCoin();
+    setState(() {});
     // Navigator.push(context, MaterialPageRoute(
     //   builder: (context) => Mainpage(coins)));
   }

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:atxcoin/home pages/card.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'coinpage.dart';
+import 'package:atxcoin/loading.dart';
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
   _HomeState createState() => _HomeState();
 }
+
 
 class _HomeState extends State<Home> {
   List<SecureCard> secureC = [
@@ -18,6 +19,7 @@ class _HomeState extends State<Home> {
     SecureCard(text: "Always logout before sharing your phone/laptop with anyone else"),
 
   ];
+  String Name = "Anurag";
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class _HomeState extends State<Home> {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(15, 10, 0, 10),
-              child: Text("Hi Anurag ️👋"
+              child: Text("Hi $Name ️👋"
               ,style: TextStyle(
                     color: Colors.black,
                   fontWeight: FontWeight.bold,
@@ -67,7 +69,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            SizedBox(height: 5.0,),
+            SizedBox(height: 2.0,),
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 3, 10, 10),
               child: Text(
@@ -107,7 +109,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            SizedBox(height: 5.0,),
+            SizedBox(height: 2.0,),
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 3, 10, 10),
               child: Text(
@@ -141,7 +143,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            SizedBox(height: 5.0,),
+            SizedBox(height: 2.0,),
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 3, 10, 10),
               child: Text(
@@ -175,7 +177,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            SizedBox(height: 5.0,),
+            SizedBox(height: 2.0,),
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 3, 10, 10),
               child: Text(
@@ -209,7 +211,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            SizedBox(height: 5.0,),
+            SizedBox(height: 2.0,),
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 3, 10, 10),
               child: Text(
@@ -321,7 +323,7 @@ class Adcard extends StatelessWidget {
         width: 360,
         height: 110,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(10),
         image: DecorationImage(
         image: AssetImage("assets/$image_location"),
         fit: BoxFit.cover,

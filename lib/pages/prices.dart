@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:atxcoin/loading.dart';
+import 'coinpage.dart';
 
 class Prices extends StatefulWidget {
   const Prices({Key? key}) : super(key: key);
@@ -50,7 +52,6 @@ class _PricesState extends State<Prices> with TickerProviderStateMixin {
                   Column(
                     children: [
                       Sticky(),
-                      Coin(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: 3152476, change: 3.56211,changePercentage: 4.24,),
                     ],
                   ),
                   Column(
@@ -153,66 +154,66 @@ class Coin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Expanded(
-        child: ListView(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    backgroundImage: NetworkImage(imageurl),
-                    radius: 18.0,
-                  ),
-                  SizedBox(width: 10,),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          name,
-                          style: TextStyle(
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          symbol,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          price.toDouble().toString(),
-                          style: TextStyle(
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
-                          child: Text(
-                            change.toDouble().toString() +"%",
-                            style: TextStyle(
-                              color: change.toDouble() < 0 ? Colors.red : Colors.green,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+    return InkWell(
+      child: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              CircleAvatar(
+                backgroundImage: NetworkImage(imageurl),
+                radius: 18.0,
               ),
-            ),
-          ],
+              SizedBox(width: 10,),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      name,
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      symbol,
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      price.toDouble().toString(),
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
+                      child: Text(
+                        change.toDouble().toString() +"%",
+                        style: TextStyle(
+                          color: change.toDouble() < 0 ? Colors.red : Colors.green,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
+      onTap: () => Navigator.push(context,
+          MaterialPageRoute(
+            builder: (context) => Coinpage(name: this.name, symbol: this.symbol, imageurl: this.imageurl, price: this.price, change: this.change, changePercentage: this.changePercentage),
+          )) ,
     );
   }
 }

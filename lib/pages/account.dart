@@ -17,6 +17,7 @@ class _AccountState extends State<Account> {
             ,style: TextStyle(color: Colors.black))),
         backgroundColor: Colors.white,
         elevation: 0,
+        automaticallyImplyLeading: false,
       ),
       body: Text("Account Page"),
     );

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class MyInvestments extends StatefulWidget {
@@ -147,7 +149,7 @@ class _MyInvestmentsState extends State<MyInvestments> {
                   width: 200,
                   height: 140,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(2),
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
                     color: Colors.white,
                   ),
                   child: Column(

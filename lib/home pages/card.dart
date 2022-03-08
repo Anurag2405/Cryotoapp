@@ -11,11 +11,6 @@ class Coincard extends StatelessWidget {
   Coincard(
       {required this.name, required this.symbol, required this.imageurl, required this.price, required this.change, required this.changePercentage});
 
-//   @override
-//   _CoincardState createState() => _CoincardState();
-// }
-//
-// class _CoincardState extends State<Coincard> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -39,7 +34,7 @@ class Coincard extends StatelessWidget {
                 Text(
                   name,
                   style: TextStyle(
-                    fontSize: 15.0,
+                    fontSize: 18.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
