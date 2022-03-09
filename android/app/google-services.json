@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "698549102128",
+    "project_id": "atxcoin-f11e9",
+    "storage_bucket": "atxcoin-f11e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698549102128:android:3bf414571e900982de6ff5",
+        "android_client_info": {
+          "package_name": "com.example.atxcoin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698549102128-b8vbb2v99g9lqq9ud9iidb9at41qdm89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD48nv6lhN5Ci4AyEmBCujSc8T5jVkFKuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698549102128-b8vbb2v99g9lqq9ud9iidb9at41qdm89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

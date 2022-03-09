@@ -124,11 +124,14 @@ class _HomeState extends State<Home> {
               child: Row(
                 children: [
                   SizedBox(width: 12,),
-                  // Coincard(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: "2905664", change: "77242", changePercentage: "2.73094"),
-                  // SizedBox(width: 12,),
-                  // Coincard(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: "2905664", change: "77242", changePercentage: "2.73094"),
-                  // SizedBox(width: 12,),
-                  // Coincard(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: "2905664", change: "77242", changePercentage: "2.73094"),
+                  Coincard(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: 2905664.0, change: 77242.0, changePercentage: 2.73094),
+                  SizedBox(width: 12,),
+                  Coincard(name: "Ethereum", symbol: "ETH", imageurl: "https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880", price: 203890.0, change: 9057.39, changePercentage: 4.64881),
+                  SizedBox(width: 12,),
+                  Coincard(name: "tether", symbol: "usdt", imageurl: "https://assets.coingecko.com/coins/images/325/large/Tether-logo.png?1598003707", price: 20000, change: 500, changePercentage: -1.73094),
+                  SizedBox(width: 12,),
+                  Coincard(name: "binancecoin", symbol: "BNB", imageurl: "https://assets.coingecko.com/coins/images/825/large/bnb-icon2_2x.png?1644979850", price: 2905664.0, change: 77242.0, changePercentage: 2.73094),
+                  SizedBox(width: 12,),
                 ],
               ),
             ),
@@ -158,12 +161,15 @@ class _HomeState extends State<Home> {
               child: Row(
                 children: [
                   SizedBox(width: 12,),
-                  // Coincard(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: "2905664", change: "77242", changePercentage: "2.73094"),
-                  // SizedBox(width: 12,),
-                  // Coincard(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: "2905664", change: "77242", changePercentage: "2.73094"),
-                  // SizedBox(width: 12,),
-                  // Coincard(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: "2905664", change: "77242", changePercentage: "2.73094"),
-                ],
+                  Coincard(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: 2905664.0, change: 77242.0, changePercentage: 2.73094),
+                  SizedBox(width: 12,),
+                  Coincard(name: "Ethereum", symbol: "ETH", imageurl: "https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880", price: 203890.0, change: 9057.39, changePercentage: 4.64881),
+                  SizedBox(width: 12,),
+                  Coincard(name: "tether", symbol: "usdt", imageurl: "https://assets.coingecko.com/coins/images/325/large/Tether-logo.png?1598003707", price: 20000, change: 500, changePercentage: -1.73094),
+                  SizedBox(width: 12,),
+                  Coincard(name: "binancecoin", symbol: "BNB", imageurl: "https://assets.coingecko.com/coins/images/825/large/bnb-icon2_2x.png?1644979850", price: 2905664.0, change: 77242.0, changePercentage: 2.73094),
+                  SizedBox(width: 12,),
+                  ],
               ),
             ),
             SizedBox(height: 25.0,),
@@ -192,11 +198,14 @@ class _HomeState extends State<Home> {
               child: Row(
                 children: [
                   SizedBox(width: 12,),
-                  // Coincard(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: "2905664", change: "77242", changePercentage: "2.73094"),
-                  // SizedBox(width: 12,),
-                  // Coincard(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: "2905664", change: "77242", changePercentage: "2.73094"),
-                  // SizedBox(width: 12,),
-                  // Coincard(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: "2905664", change: "77242", changePercentage: "2.73094"),
+                  Coincard(name: "Bitcoin", symbol: "BTC", imageurl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", price: 2905664.0, change: 77242.0, changePercentage: 2.73094),
+                  SizedBox(width: 12,),
+                  Coincard(name: "Ethereum", symbol: "ETH", imageurl: "https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880", price: 203890.0, change: 9057.39, changePercentage: 4.64881),
+                  SizedBox(width: 12,),
+                  Coincard(name: "tether", symbol: "usdt", imageurl: "https://assets.coingecko.com/coins/images/325/large/Tether-logo.png?1598003707", price: 20000, change: 500, changePercentage: -1.73094),
+                  SizedBox(width: 12,),
+                  Coincard(name: "binancecoin", symbol: "BNB", imageurl: "https://assets.coingecko.com/coins/images/825/large/bnb-icon2_2x.png?1644979850", price: 2905664.0, change: 77242.0, changePercentage: 2.73094),
+                  SizedBox(width: 12,),
                 ],
               ),
             ),
@@ -262,8 +271,6 @@ class _HomeState extends State<Home> {
         ),
       ),
     );
-
-
   }
 }
 

@@ -5,14 +5,25 @@ import 'package:atxcoin/pages/orders.dart';
 import 'package:atxcoin/pages/my_investments.dart';
 import 'package:atxcoin/pages/account.dart';
 import 'package:atxcoin/loading.dart';
+import 'pages/login_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'pages/register_screen.dart';
+import 'pages/first_screen.dart';
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MaterialApp(
+    initialRoute: "/",
+    routes: {
+      "/": (context) => firstScreen(),
+      '/loading': (context) => Loading(),
+      '/home': (context) => Mainpage(),
+      '/login': (context) => LoginScreen(),
+      '/register': (context) => RegistrationScreen(),
 
-void main() => runApp(MaterialApp(
-  initialRoute: "/home",
-  routes: {
-    "/": (context) => Loading(),
-    '/home': (context) => Mainpage(),
-  },
-));
+    },
+  ));
+}
 //
 
 
