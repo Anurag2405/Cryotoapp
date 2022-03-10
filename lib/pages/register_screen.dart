@@ -138,7 +138,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     //signup button
     final signUpButton = Material(
       elevation: 5,
-      borderRadius: BorderRadius.circular(30),
+      borderRadius: BorderRadius.circular(4),
       color: Colors.indigo,
       child: MaterialButton(
           padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
